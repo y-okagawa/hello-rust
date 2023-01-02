@@ -1,0 +1,12 @@
+version: "3"
+services:
+  app:
+    image: rust:1.66-slim
+    tty: true
+    command: cargo run
+    working_dir: /usr/local/hello-rust
+    ports:
+      - "8080:8080"
+    volumes:
+      - "./:/usr/local/hello-rust"
+
